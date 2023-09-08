@@ -3,7 +3,7 @@ from django.http import HttpResponse, HttpResponseForbidden, JsonResponse, Strea
 
 
 def index(request):
-    return HttpResponse("Hello, world. You are in the polls index.")
+    return HttpResponse("Hello, world! You are in the polls index.")
 
 
 def index2(request):
