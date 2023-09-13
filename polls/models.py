@@ -10,7 +10,7 @@ class Question(models.Model):
     def __str__(self):
         return self.question_text
 
-    def was_published_recently(self):
+    def was_published_recently(self) -> bool:
         return self.pub_date >= timezone.now() - datetime.timedelta(days=2)
 
 
@@ -21,7 +21,4 @@ class Choice(models.Model):
 
     def __str__(self):
         return self.choice_text
-
-
-
 
