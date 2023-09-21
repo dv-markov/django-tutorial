@@ -5,6 +5,7 @@
     <title>Poll results</title>
 </head>
 <body>
+    <h5><a href="{% url 'polls:index' %}">На главную</a></h5>
     <h1>{{ question.question_text }}</h1>
     <ul>
     {% for choice in question.choice_set.all %}
