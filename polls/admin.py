@@ -38,5 +38,29 @@ class ChoiceAdmin(admin.ModelAdmin):
     )
 
 
+class RegistrationCodeAdmin(admin.ModelAdmin):
+    list_display = (
+        'id',
+        'phone',
+        'code',
+        'time_create'
+    )
+    list_display_links = (
+        'id',
+        'phone',
+        'code'
+    )
+    fields = (
+        'phone',
+        'code',
+        'time_create'
+    )
+    readonly_fields = (
+        'code',
+        'time_create',
+    )
+
+
 admin.site.register(models.Question, QuestionAdmin)
 # admin.site.register(models.Choice, ChoiceAdmin)
+admin.site.register(models.RegistrationCode, RegistrationCodeAdmin)
